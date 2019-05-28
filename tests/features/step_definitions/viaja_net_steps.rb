@@ -36,6 +36,7 @@ Quando("clico em comprar") do
 end
 
 Quando("preencho o formulario passageiro com") do |passageiro|
+    
     @checkout.set_nome passageiro.hashes[0]['nome']
     @checkout.set_sobrenome passageiro.hashes[0]['sobrenome']
     @checkout.set_data_nascimento passageiro.hashes[0]['data_nascimento']

@@ -39,7 +39,8 @@ class ViajaNetPage < SitePrism::Page
    end
 
    def click_comprar
-      page.driver.browser.switch_to.window page.driver.browser.window_handles.last
+      #page.driver.browser.switch_to.window page.driver.browser.window_handles.last
+      switch_to_window windows.last
       comprar.click
    end
 

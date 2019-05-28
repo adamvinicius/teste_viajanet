@@ -29,7 +29,8 @@ class ViajaNetCheckoutPage < SitePrism::Page
     element :reserva_processamento, "#topo > div.page.fluxo-confirmation.ng-scope > div.page.ng-scope > section > div > div > h1 > span > small"
 
     def set_nome _nome
-        page.driver.browser.switch_to.window page.driver.browser.window_handles.last
+        #page.driver.browser.switch_to.window page.driver.browser.window_handles.last
+        switch_to_window windows.last
         nome.set _nome
     end
 
